@@ -1,0 +1,74 @@
+@import "src/themes/__variables.scss";
+
+:local {
+	.gridContainer {
+		display: flex;
+		justify-content: center;
+		align-content: center;
+		flex-direction: column;
+		max-width: 500px;
+		margin: 0 auto;
+	}
+
+	.row {
+		display: flex;
+		flex-wrap: nowrap;
+		flex-direction: row;
+	}
+
+
+	.infoContainer {
+		background-size: 100%;
+		background-position: center top;
+		background-repeat: no-repeat;
+		position: absolute;
+		left: 0;
+		right: 0;
+		top: 0;
+		bottom: 0;
+		text-align: center;
+		padding: 40px;
+		display: flex;
+		flex-direction: column;
+		justify-content: flex-end;
+
+		button {
+			height: 50px;
+			max-width: 300px;
+			margin: 30px auto !important;
+		}
+	}
+
+	.infoTitle {
+		font-size: 30px;
+		color: #1b4587;
+		margin-bottom: 18px;
+	}
+
+	.infoBody {
+		> p {
+			font-size: 16px;
+			color: #83848f;
+			margin-top: 0;
+		}
+
+		> span {
+			font-size: 16px;
+			color: #1b4587;
+			font-weight: bold;
+		}
+	}
+
+	.infoMessage {
+		font-size: 14px;
+		color: #83848f;
+	}
+
+	.message {
+		color: #B8B6BA;
+		margin: 20px 0px 40px 0;
+		display: block;
+		font-size: 16px;
+		text-align: center;
+	}
+}

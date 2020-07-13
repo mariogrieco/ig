@@ -1,0 +1,180 @@
+@import "src/themes/__variables.scss";
+
+:local {
+  .button {
+    $color: #363636;
+
+    background: transparent;
+    border-radius: 45px;
+    border: 0;
+    padding: 20/22+em;
+    min-width: 390px;
+
+    cursor: pointer;
+    display: inline-block;
+    font-weight: 500;
+    font-size: 18/16 + em;
+    line-height: 1;
+    overflow: hidden;
+    transition: background-color .5s ease-out, border-color .25s ease-out, color .5s ease-out;
+    position: relative;
+    text-decoration: none;
+    white-space: nowrap;
+    vertical-align: middle;
+    margin: 0 auto;
+
+    font-family: 'Oxygen', sans-serif;
+    font-weight: bold;
+
+    @media all and (max-width: $breakpoint-tablet) {
+      min-width: 0;
+      width: 100%;
+    }
+
+    &[disabled] {
+      cursor: default;
+    }
+
+    &:hover,
+    &.isHover {
+      border-color: darken(#dbdbdb, 5%);
+    }
+
+    &:focus {
+      box-shadow: 0 0 0 3px fade-out(#dbdbdb, .5);
+      outline: none;
+    }
+
+    & + .button {
+      margin-left: 8/14em;
+    }
+
+    &.hasIcon {
+      display: inline-flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    &.isRounded {
+      border-radius: 99/16 + em;
+    }
+
+    &.isLink {
+      border: 1px solid transparent;
+      display: inline-block;
+
+      &:hover {
+        color: darken($color, 20%);
+        border-color: fade($color, 50%);
+      }
+    }
+
+    &.isLoading {
+      overflow: hidden;
+      position: relative;
+      pointer-events: none;
+
+      &:after {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-image: var(--color-loader);
+        background-color: inherit;
+        background-position: center;
+        background-size: 25%;
+        background-repeat: no-repeat;
+        z-index: 1;
+      }
+    }
+
+    //&.colorPrimary {
+    //  .button-mixin(@colorPrimary);
+    //}
+
+    // Sizes
+    &.__size-small {
+      font-size: 11/16 + em;
+    }
+
+    &.__size-medium {
+      font-size: 14/16 + em;
+      line-height: 32/14em;
+    }
+
+    // Should have a toal height of 48px to match form fields
+    &.__size-regular {
+      font-size: 1em;
+      padding-top: 8/16 + em;
+      padding-bottom: 8/16 + em;
+    }
+
+    &.__size-large {
+      font-size: 1.25em;
+    }
+
+    &.__padding-none {
+      padding: 0;
+    }
+
+    &.__padding-large {
+      padding: 9/13em 2em; //Calculated so that the final height for regular size is 48 (same as a form field)
+    }
+  }
+
+  .buttons {
+    > .button {
+      margin: 0 .25em .25em 0;
+
+      &:last-child {
+        margin-right: 0;
+      }
+    }
+  }
+
+  .label,
+  .icon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .icon {
+    padding: 0 .5em;
+
+    img {
+      display: block;
+      height: auto;
+      width: auto;
+    }
+
+    &:first-child {
+      padding-left: 0;
+    }
+
+    &:last-child {
+      padding-right: 0;
+    }
+  }
+
+  .group {
+    display: inline-flex;
+
+    > .button + .button {
+      margin-left: 0;
+    }
+
+    > .button:not(:last-child) {
+      border-bottom-right-radius: 0;
+      border-top-right-radius: 0;
+      margin-right: -1px;
+    }
+
+    > .button:not(:first-child) {
+      border-bottom-left-radius: 0;
+      border-top-left-radius: 0;
+    }
+  }
+}

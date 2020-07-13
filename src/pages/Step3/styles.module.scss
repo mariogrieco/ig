@@ -1,0 +1,13 @@
+:local {
+	.container {
+		// min-height: calc(100vh - 90px - 186px);
+		min-height: 620px;
+	}
+
+	.imgContainer {
+		background-size: cover;
+		background-position: top;
+		background-position-y: 0;
+		background-repeat: no-repeat;
+	}
+}

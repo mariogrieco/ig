@@ -1,0 +1,59 @@
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <link rel="shortcut icon" href="%PUBLIC_URL%/favicon.ico" />
+    <link href="https://fonts.googleapis.com/css?family=Oxygen:400,700,800,900|Roboto+Slab:300,400,700,800&display=swap" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <title>%REACT_APP_WEBSITE_TITLE%</title>
+    <style>
+      body.loading .js--page-loader {
+          opacity: 1;
+          visibility: visible;
+      }
+
+      .js--page-loader {
+          position: fixed;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          opacity: 0;
+          top: 0;
+          left: 0;
+          z-index: 9999;
+          background: #fff;
+          width: 100vw;
+          height: 100vh;
+          overflow: hidden;
+          transition: opacity .2s ease-out, visibility .2s;
+          visibility: hidden;
+      }
+  </style>
+  </head>
+  <body class="loading">
+    <noscript>You need to enable JavaScript to run this app.</noscript>
+    <div id="root"></div>
+    <div id="modal-root"></div>
+
+    <div class="js--page-loader">
+      <svg width="128" height="128" viewBox="0 0 38 38" xmlns="http://www.w3.org/2000/svg" stroke="#333">
+          <g fill="none" fill-rule="evenodd">
+              <g transform="translate(1 1)" stroke-width="2">
+                  <circle stroke-opacity=".5" cx="18" cy="18" r="18"/>
+                  <path d="M36 18c0-9.94-8.06-18-18-18">
+                      <animateTransform
+                              attributeName="transform"
+                              type="rotate"
+                              from="0 18 18"
+                              to="360 18 18"
+                              dur="1s"
+                              repeatCount="indefinite"
+                      />
+                  </path>
+              </g>
+          </g>
+      </svg>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,14 @@
+label:
+    nameOnCard: "Name on Card"
+    creditCardNumber: "Credit Card Number"
+    cardType: "Credit Card Type"
+    cardExpiry: "Card Expiry"
+    cvv: "CVV"
+    continue: "MAKE A DONATION ONLINE!"
+
+placeholder:
+    nameOnCard: "Email Address"
+    cardType: "Credit Card Type"
+    creditCardNumber: "0000 0000 0000 000"
+    cardExpiry: "MM / YYYY"
+    cvv: "CVV"

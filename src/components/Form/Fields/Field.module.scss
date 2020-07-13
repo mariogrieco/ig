@@ -1,0 +1,151 @@
+:local {
+  .field {
+    border: 1px solid transparent;
+    border-radius: 4px;
+    display: flex;
+    position: relative;
+
+    > div {
+      height: calc(100% - 1px);
+    }
+
+    &.noBorder {
+      border: none;
+    }
+
+    input[type='text'],
+    input[type='search'],
+    input[type='date'],
+    input[type='email'],
+    input[type='number'],
+    input[type='password'],
+    input[type='tel'],
+    input[type='url'],
+    input[type='datetime-local'],
+    input[type='date-local'],
+    input[type='file'],
+    input[type='range'],
+    textarea {
+      background: #FFFFFF;
+      border: none;
+      color: #84858F;
+      display: block;
+      font-size: 1em;
+      line-height: 1.4;
+      transition: border-color 0.25s ease-in-out, box-shadow 0.25s ease-in-out;
+      padding: 13/16 * 1em;
+      width: 100%;
+      border-radius: 4px;
+
+      .__size-medium,
+      .__size-medium & {
+        font-size: 14/16 * 1em;
+        line-height: 32/14 * 1em;
+        padding: 0 8/14 * 1em;
+      }
+
+      &:focus {
+        outline: none;
+      }
+
+      &[readonly] {
+        cursor: default;
+      }
+
+      &:not([readonly]) {
+        &:focus {
+          border-color: #F9F5F1;
+          box-shadow: inset 0 1px 2px fade-out(#F9F5F1, .5);
+          outline: none;
+        }
+      }
+
+      &:disabled {
+        color: #d0d0d0;
+        cursor: not-allowed;
+      }
+    }
+
+    input[type='file'] {
+      background: #fff;
+      font-size: 0.9em;
+    }
+
+    input[type='range'] {
+      &:not(:read-only):focus {
+        box-shadow: none;
+      }
+    }
+
+    &[error-message] {
+      &:after {
+        content: attr(error-message);
+        background: #ff3333;
+        color: #fff;
+        font-size: 0.85em;
+        padding: 0.1em 0.5em;
+        position: absolute;
+        right: 1 / 0.85em;
+        top: 100%;
+        z-index: 9;
+      }
+    }
+
+    textarea {
+      resize: none;
+
+      &[resize='vertical'] {
+        resize: vertical;
+      }
+    }
+  }
+
+  .focused {
+    label {
+      color: #000; // IE11 fallback
+      color: var(--color-selected);
+    }
+
+    input,
+    textarea {
+      color: #000 !important; // IE11 fallback
+      color: var(--color-selected) !important;
+      border-color: transparent;
+    }
+
+    .field {
+      border: 1px solid #000; // IE11 fallback
+      border: 1px solid #F9F5F1;
+      box-shadow: 0px 0px 8px rgba(197, 158, 120, 0.24);
+    }
+  }
+
+  .error {
+    label {
+      color: #f00;
+    }
+
+    input,
+    textarea {
+      color: #f00 !important;
+    }
+
+    .field {
+      border: 1px solid #f00;
+      box-shadow: 0 0 4px rgba(255, 0, 0, 0.5);
+    }
+  }
+
+  .wrapper {
+    width: 100%;
+    position: relative;
+  }
+
+  ::-webkit-input-placeholder, /* Chrome/Opera/Safari */
+  ::-moz-placeholder, /* Firefox 19+ */
+  :-ms-input-placeholder, /* IE 10+ */
+  :-moz-placeholder, /* Firefox 18- */
+  input::placeholder {
+    color: #D5D7DC;
+  }
+}

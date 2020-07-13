@@ -1,0 +1,14 @@
+@import "src/themes/__variables.scss";
+
+:local {
+	.expiryText {
+		color: #1B4587;
+		text-align: center;
+		margin: 0 auto;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		flex-direction: column;
+		margin-bottom: 80px;
+	}
+}

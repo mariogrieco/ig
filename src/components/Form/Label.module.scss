@@ -1,0 +1,26 @@
+:local {
+  .label {
+    color: #8F8F8F;
+    cursor: pointer;
+    display: block;
+    font-size: 13/16 * 1em;
+    font-weight: 600;
+    margin-bottom: 0.6em;
+    font-family: 'Oxygen', sans-serif;
+    font-weight: bold;
+    text-shadow: 0em 0em .05em #8F8F8F;
+    &.isFloating {
+      background: #FFF;
+      display: block;
+      font-size: 0.8125em;
+      font-weight: 400;
+      padding: 0 0.38461538em;
+      transition: all 0.25s ease-out;
+      text-align: left;
+      position: absolute;
+      top: -0.66em;
+      left: 0.66em;
+      z-index: 1;
+    }
+  }
+}

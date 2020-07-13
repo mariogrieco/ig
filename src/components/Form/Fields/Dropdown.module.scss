@@ -1,0 +1,139 @@
+:local {
+  .dropdown {
+    display: block;
+    transition: border-color 0.25s ease-in-out, box-shadow 0.25s ease-in-out;
+    position: relative;
+    width: 100%;
+  }
+}
+
+:global {
+  .sh-select__container {
+    .sh-select__control {
+      background: #F7F8F8;
+      font-size: 1em;
+      border-width: 1px;
+      border-color: transparent;
+      box-shadow: none;
+      transition: none;
+      z-index: 1;
+
+      &:hover {
+        border-color: transparent;
+      }
+
+      &--is-focused {
+        // border-color: var(--color-selected) !important;
+      }
+
+      &--menu-is-open {
+        // border-color: var(--color-selected) !important;
+        border-bottom-left-radius: 0;
+        border-bottom-right-radius: 0;
+      }
+
+      .sh-select__dropdown-indicator {
+        polygon {
+          stroke: #000; // IE11 fallback
+          stroke: var(--color-selected);
+          fill: var(--color-selected);
+        }
+      }
+
+      &--is-focused,
+      &--menu-is-open {
+        .sh-select__dropdown-indicator {
+          polygon {
+            stroke: #000; // IE11 fallback
+            stroke: var(--color-selected);
+            fill: var(--color-selected);
+          }
+        }
+      }
+    }
+
+    .sh-select__value-container {
+      padding: .8125em;
+    }
+
+    .sh-select__container {
+      border: none;
+    }
+
+    .sh-select__placeholder,
+    .sh-select__single-value {
+      color: #3d3f34;
+      margin-left: 0;
+      margin-right: 0;
+      overflow: visible;
+    }
+
+    .sh-select__menu {
+      width: calc(100% + 2px);
+      box-shadow: none;
+      background-color: #F9F9F9;
+      border: 1px solid #000; // IE11 fallback
+      border: 1px solid #F9F5F1;
+      box-shadow: 0px 0px 8px rgba(197, 158, 120, 0.24);
+      border-top: 0;
+      border-top-left-radius: 0;
+      border-top-right-radius: 0;
+      left: -1px;
+      margin-top: -2px;
+      z-index: 999;
+    }
+
+    .sh-select__menu-list {
+      border-top: 1px solid #D8D8D8;
+      padding-top: 10/16+em;
+      margin: 0 15/16+em;
+    }
+
+    .sh-select__option-container {
+      position: relative;
+
+      .sh-select__vehicle-voucher-value {
+        position: absolute;
+        right: 1em;
+        top: 50%;
+        transform: translateY(-50%);
+        border: 1px solid #999;
+        border-radius: 4px;
+        font-size: 12/16+em;
+        padding: 4px 8px;
+        color: #999;
+      }
+    }
+
+    .sh-select__option {
+      width: auto;
+      color: #676767;
+      border-radius: 2px;
+      padding: 10/16+em 15/16+em;
+
+      &--is-focused {
+        background-color: #ececec;
+      }
+
+      &--is-selected {
+        background-color: #000; // IE11 fallback
+        background-color: var(--color-selected);
+        color: #fff;
+      }
+    }
+
+    .sh-select__indicator-separator {
+      background-color: #f2eae4;
+      height: calc(100% + 2px);
+      margin: 0;
+      width: 2px;
+      position: relative;
+      top: -1px;
+    }
+
+    .sh-select__dropdown-indicator {
+      padding: 0 12/16+em;
+      display: block;
+    }
+  }
+}

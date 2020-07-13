@@ -1,0 +1,11 @@
+$breakpoint-mobile: 767px;
+$breakpoint-tablet: 1023px;
+$breakpoint-desktop: 1200px;
+$breakpoint-main-container: 1066px;
+
+// mixins
+@mixin dynamicTextSize($baseWidth, $baseFontSize: 16px, $minWidth: 320px) {
+  @media (max-width: $baseWidth) and (min-width: $minWidth) {
+    font-size: $baseFontSize / $baseWidth * 100vw;
+  }
+}

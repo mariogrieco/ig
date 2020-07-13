@@ -1,0 +1,14 @@
+description: "Please confirm the following information."
+
+label:
+    firstName: "First Name"
+    lastName: "Last Name"
+    emailAddress: "Email Address"
+    phoneNumber: "Phone Number"
+    continueToStep2: "MAKE A DONATION ONLINE!"
+
+placeholder:
+    firstName: "Enter First Name"
+    lastName: "Enter Last Name"
+    emailAddress: "Enter Email Address"
+    phoneNumber: "Enter Phone Number"

@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="13px" height="14px" viewBox="0 0 13 14" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 63.1 (92452) - https://sketch.com -->
+    <title>Triangle</title>
+    <desc>Created with Sketch.</desc>
+    <g id="Shift-HigherEd-WebsiteMini-Desktop" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Shift-HigherEd-WebsiteMini-Desktop-PAGE4" transform="translate(-1287.000000, -650.000000)" fill="#FFFFFF">
+            <g id="BODY">
+                <g id="FORM" transform="translate(852.000000, 430.000000)">
+                    <g id="City" transform="translate(0.000000, 181.000000)">
+                        <path d="M442.880471,41.1351606 L448.206254,51.0259002 C448.468092,51.5121709 448.286153,52.118633 447.799883,52.3804711 C447.654174,52.4589295 447.491272,52.5 447.325783,52.5 L436.674217,52.5 C436.121932,52.5 435.674217,52.0522847 435.674217,51.5 C435.674217,51.3345109 435.715288,51.1716086 435.793746,51.0259002 L441.119529,41.1351606 C441.381367,40.6488899 441.987829,40.4669512 442.4741,40.7287893 C442.646401,40.8215668 442.787694,40.9628597 442.880471,41.1351606 Z" id="Triangle" transform="translate(442.000000, 46.000000) rotate(-270.000000) translate(-442.000000, -46.000000) "></path>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

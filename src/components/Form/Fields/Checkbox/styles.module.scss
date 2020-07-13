@@ -1,0 +1,55 @@
+:local {
+  .checkbox {
+    display: flex;
+    align-items: center;
+    line-height: 1em;
+    position: relative;
+    vertical-align: middle;
+
+    > input {
+      position: absolute;
+      left: -9999px;
+      visibility: hidden;
+
+      &:checked + .widget {
+        border-color: var(--color-selected);;
+        > svg {
+          opacity: 1;
+          transform: translate(0, 0);
+          visibility: visible;
+        }
+      }
+    }
+  }
+
+  .widget {
+    background: #fff;
+    cursor: pointer;
+    display: block;
+    border: 1px solid #d1d1d1;
+    height: 26/16 + em;
+    width: 26/16 +em;
+    position: relative;
+    border-radius: 4px;
+
+    > svg {
+      font-size: 14/16 + em;
+      margin: 2/14 + em;
+      height: 20/14 + em;
+      width: 20/14 + em;
+      transition: all 0.25s cubic-bezier(0.075, 0.82, 0.165, 1);
+      transform: translate(50%, 0);
+      opacity: 0;
+      visibility: hidden;
+
+      path {
+        fill: #000; // IE11 fallback
+        fill: var(--color-selected);
+      }
+    }
+  }
+
+  .label {
+    margin-left: .5em;
+  }
+}

@@ -1,0 +1,84 @@
+@import "src/themes/__variables.scss";
+
+:local {
+    .donateBtn {
+        width: 100%;
+        max-width: 450px;
+        text-align: left;
+        max-height: 162px;
+        margin: 10px auto;
+        background-color: white;
+        border-radius: 4px;
+        padding: 40px 30px;
+        font-size: 16px;
+        position: relative;
+        cursor: pointer;
+        box-shadow: 0 1.5px 1.5px 3.5px rgba(240,240,240, 0);
+        border: 1px solid transparent;
+
+        transition: all .2s linear;
+
+
+        @media all and (max-width: $breakpoint-tablet) {
+            max-width: 644px;
+        }
+
+        > span {
+            color: #c59e78;
+            font-family: 'Oxygen', sans-serif;
+            font-weight: 900;
+            text-shadow: 0px 0px 1.24px #c59e78;
+        }
+
+        > p {
+            color: #A1A2A9;
+            font-weight: normal;
+        }
+
+        &:focus,
+        &:active,
+        &:hover {
+            box-shadow: 0 1.5px 1.5px 3.5px rgba(197, 158, 120, 0.15);
+           // border: 1px solid #c59e78;
+        }
+
+        &.active {
+            border: 1px solid #c59e78;
+        }
+    }
+
+    .center {
+        width: 100%;
+        text-align: center;
+        margin: 0 auto;
+        display: block;
+    }
+
+    .icon {
+        top: 20px;
+        right: 15px;
+        background-color: #F9F5F1;
+        border-radius: 50%;
+        position: absolute;
+        width: 46px;
+        height: 46px;
+
+        background-size: 100%;
+        background-position: center;
+        background-repeat: no-repeat;
+    }
+
+    .donateBtn--small {
+        width: 146px;
+        font-size: 18px;
+        height: 66px;
+        overflow: hidden;
+        padding-top: 0;
+        padding-bottom: 0;
+        line-height: 66px;
+
+        > span {
+            line-height: 64px;
+        }
+    }
+}

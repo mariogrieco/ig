@@ -1,0 +1,16 @@
+version: "3.4"
+
+services:
+    app:
+        networks:
+            - default
+            - proxy
+        labels:
+            - traefik.enable=true
+            - traefik.frontend.rule=Host:${HOST}
+            - traefik.docker.network=proxy
+
+networks:
+    # This enables the use of traefik
+    proxy:
+        external: true

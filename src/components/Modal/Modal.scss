@@ -1,0 +1,72 @@
+$closeButtonMargin: 1.6em;
+
+body.sh-modal-active {
+  overflow: hidden !important;
+}
+
+.sh-modal-loader {
+  &,
+  img {
+    width: 100%;
+  }
+}
+
+.sh-modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: transparent;
+  transition: all .2s ease-in;
+  z-index: 99;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: rgba(0, 0, 0, 0.6);
+  pointer-events: none;
+
+  .sh-modal-content-container {
+    display: flex;
+    position: relative;
+    transition: opacity .2s ease-in;
+    max-width: 85vw;
+    max-height: 85vh;
+    pointer-events: all;
+    flex: 1 1 auto;
+  }
+
+  .sh-modal-content-inner {
+    overflow: auto;
+    max-width: 100%;
+    max-height: 100%;
+    position: relative;
+    flex: 1 1 auto;
+  }
+}
+
+.react-modal-wrapper {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+.sh-modal-close-btn {
+  position: fixed;
+  top: 3em;
+  right: 3em;
+  z-index: 101;
+  text-indent: -9999px;
+  background-size: 100%;
+  width: 1.2em;
+  height: 1.2em;
+  background: url("data:image/svg+xml,<svg width='21' height='21' viewBox='0 0 21 21' xmlns='http://www.w3.org/2000/svg'><g fill='%23FFF' fill-rule='evenodd'><path d='M2.592.044l18.364 18.364-2.548 2.548L.044 2.592z'/><path d='M0 18.364L18.364 0l2.548 2.548L2.548 20.912z'/></g></svg>") no-repeat center;
+  line-height: 1;
+  opacity: .75;
+  cursor: pointer;
+  border: 0;
+
+  &:hover {
+    opacity: 1;
+  }
+}

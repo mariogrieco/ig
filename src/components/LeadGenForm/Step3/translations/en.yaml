@@ -1,0 +1,16 @@
+label:
+    amount: "Enter A Custom Amount"
+    continue: "DONATE ONLINE INSTEAD"
+
+placeholder:
+    amount: "Enter Amount"
+
+
+byPhone:
+    title: "Please consider donating online, otherwise we will be glad to follow up with you over the phone."
+    thanksMessage: Thank you for your support!
+    alternative: "I’d prefer to donate over the phone"
+
+
+byEmail:
+    alternative: "I’d prefer to donate through mail"

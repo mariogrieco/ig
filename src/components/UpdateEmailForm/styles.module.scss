@@ -1,0 +1,40 @@
+@import "themes/__variables.scss";
+
+:local {
+  .fieldWrapper {
+    width: 100%;
+    max-width: 400px;
+    margin: 0 auto;
+    overflow: hidden;
+    position: relative;
+
+    button {
+      cursor: pointer;
+      color: #fff;
+      border: 0;
+      border-radius: 4px;
+      padding: 6px 12px;
+      font-weight: bold;
+      position: absolute;
+      top: 50%;
+      margin-top: (-12/11)+em;
+      font-size: 11/16+em;
+      right: -100px;
+      transition: all .2s ease-in;
+
+      &.isActive {
+        right: 10px;
+      }
+    }
+
+
+    @media all and (max-width: $breakpoint-tablet) {
+      margin: 15px auto !important;
+    }
+  }
+
+  .smallPrint {
+    font-size: 12/16+em;
+    margin-bottom: 10/12+em !important;
+  }
+}

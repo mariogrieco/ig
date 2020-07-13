@@ -1,0 +1,33 @@
+@import "src/themes/__variables.scss";
+
+:root {
+  --top-bar-height: 90px;
+
+  @media all and (max-width: $breakpoint-mobile) {
+    --top-bar-height: 90px;
+  }
+}
+
+:local {
+  .container {
+    position: fixed;
+    left: 0;
+    top: 0;
+    z-index: 100;
+
+    display: flex;
+
+    width: 100%;
+    height: var(--top-bar-height);
+    background-color: #FFFFFF;
+    // box-shadow: 0 2px 2px 0 rgba(0,0,0,.09);
+
+    @media all and (max-width: $breakpoint-mobile) {
+      height: var(--top-bar-height);
+    }
+  }
+
+  .logo {
+    margin: 0 auto;
+  }
+}

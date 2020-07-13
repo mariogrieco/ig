@@ -1,0 +1,75 @@
+:local {
+  --color-error: red;
+
+  .tabs {
+    display: flex;
+    position: relative;
+    flex-wrap: wrap;
+    flex-grow: 1;
+
+    &[error-message] {
+      outline: 1px solid #000; // IE11 fallback
+      outline: 1px solid var(--color-error);
+
+      &:after {
+        content: attr(error-message);
+        background: #000; // IE11 fallback
+        background: var(--color-error);
+        color: #FFF;
+        font-size: .85em;
+        padding: .1em .5em;
+        position: absolute;
+        right: 1 / .85 + em;
+        top: 100%;
+        z-index: 9;
+      }
+    }
+
+    &:after {
+      content: '';
+      background: #eeeeee;
+      height: 1px;
+      position: absolute;
+      bottom: 0;
+      left: -100%;
+      right: -100%;
+    }
+  }
+
+  .tab {
+    flex-grow: 1;
+    position: relative;
+    overflow: hidden;
+
+    > input[type="radio"] {
+      display: block;
+      opacity: 0;
+      margin: 0;
+      position: absolute;
+      top: 0;
+      left: 0;
+      height: 100%;
+      width: 100%;
+      z-index: -1;
+
+      &:checked + label {
+        background: #fff;
+        border-bottom-color: #000; // IE11 fallback
+        border-bottom-color: var(--color-selected);
+        color: #000; // IE11 fallback
+        color: var(--color-selected);
+        font-weight: 600;
+      }
+    }
+
+    label {
+      border-bottom: 7px solid transparent;
+      color: #acacac;
+      cursor: pointer;
+      display: block;
+      padding: .75em .25em;
+      text-align: center;
+      width: 100%;
+    }
+  }
+}

@@ -1,0 +1,126 @@
+@import '~choices.js/public/assets/styles/choices.css';
+
+$gutter: 4/16*1em;
+
+.sh-form-field {
+  .choices[data-type*='select-one'],
+  .choices[data-type*='select-multiple'],
+  .choices[data-type*='text'] {
+    width: 100%;
+    margin-bottom: auto;
+    display: inline-flex;
+
+    .choices__inner {
+      background-color: #fff;
+      border: 0;
+      font-size: 1em;
+      padding: $gutter 54/16em $gutter $gutter;
+      position: relative;
+
+      &:after {
+        content: '';
+
+        transform: translateY(-50%);
+        position: absolute;
+        top: 50%;
+        right: $gutter * 2;
+        width: 28/16em;
+        height: 28/16em;
+        padding: 2/16em;
+
+        cursor: pointer;
+
+        border-radius: 50%;
+        background: url("data:image/svg+xml,<svg width='28px' height='28px' viewBox='0 0 28 28' version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink'><g stroke-width='3' stroke='%23fff' fill='none' stroke-linecap='round'><path d='M14,7 L14,21'></path><path d='M7,14 L21,14'></path></g></svg>")
+          center no-repeat;
+        background-size: 28/16em;
+      }
+    }
+
+    .choices__input.is-hidden {
+      display: none;
+    }
+
+    .choices__button {
+      background: url("data:image/svg+xml,<svg width='21' height='21' viewBox='0 0 21 21' xmlns='http://www.w3.org/2000/svg'><g fill='%23656565' fill-rule='evenodd'><path d='M2.592.044l18.364 18.364-2.548 2.548L.044 2.592z'/><path d='M0 18.364L18.364 0l2.548 2.548L2.548 20.912z'/></g></svg>");
+      background-size: 50%;
+      background-repeat: no-repeat;
+      background-position: center;
+      opacity: 1;
+      border-radius: 50%;
+      border: 1px solid #656565;
+      width: 18px;
+      height: 18px;
+      margin: 0 0 0 15px;
+      padding: 0;
+    }
+
+    .choices__list {
+      vertical-align: middle;
+    }
+
+    .choices__list--dropdown {
+      width: calc(100% + 2px);
+      margin-left: -1px;
+      border-color: #d9d9d9;
+
+      .choices__item {
+        font-size: 1em;
+      }
+    }
+
+    .choices__list--multiple,
+    .choices__list--single {
+      display: inline-block;
+      position: relative;
+
+      .choices__item {
+        background-color: #f4f4f4;
+        font-size: 1em;
+        border: 0;
+        border-radius: 1px;
+        padding: 7/16em 12/16em;
+        line-height: 1;
+        margin: $gutter;
+        color: #656565;
+        font-weight: normal;
+
+        &.is-highlighted {
+          background-color: #f4f4f4;
+          border: 0;
+        }
+      }
+    }
+
+    .choices__list--single {
+      .choices__item {
+        background-color: #ffffff;
+      }
+    }
+
+    .choices__input--cloned {
+      background-color: transparent;
+      display: inline-block;
+      height: 38/14em;
+      margin: 0;
+      padding: 0;
+      width: 1em;
+      vertical-align: middle;
+
+      &:focus {
+        box-shadow: none;
+      }
+    }
+  }
+
+  .choices[data-type*='select-one'] {
+    .choices__input--cloned {
+      width: 100%;
+      padding: 10px;
+    }
+
+    .choices__inner:after {
+      content: none;
+    }
+  }
+}

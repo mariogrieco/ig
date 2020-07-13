@@ -1,0 +1,17 @@
+description: "Please confirm the following information."
+
+label:
+    address: "Addres"
+    lastName: "Last Name"
+    city: "City"
+    suiteAptNum: "Suite / Apt. #"
+    state: "State"
+    zip: "Zip Code"
+    continue: "MAKE A DONATION ONLINE!"
+
+placeholder:
+    city: "Enter City"
+    adress: "Enter Address"
+    suiteAptNum: "0000"
+    state: "State"
+    zip: "00000"

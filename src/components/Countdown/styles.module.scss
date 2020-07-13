@@ -1,0 +1,43 @@
+@import "src/themes/__variables.scss";
+
+:local {
+    .countdown {
+        font-weight: 100;
+        letter-spacing: 0;
+
+        display: flex;
+        padding: .25em 29/18+em;
+        font-family: 'Oxygen', sans-serif;
+
+        @media all and (max-width: $breakpoint-mobile) {
+            font-size: .85em;
+        }
+    }
+
+    .unitContainer {
+        text-align: center;
+    }
+
+    .digit {
+        display: inline-block;
+        font-weight: bold;
+        text-align: center;
+        font-size: 30/18+em;
+        font-weight: 300 !important;
+        line-height: 1;
+        width: 20/30+em;
+    }
+
+    .label {
+        display: block;
+        font-size: 10/18+em;
+        margin-top: 2/10+em;
+        text-transform: uppercase;
+        font-weight: 300 !important;
+    }
+
+    .separator {
+        font-size: 30/18+em;
+        line-height: .85;
+    }
+}

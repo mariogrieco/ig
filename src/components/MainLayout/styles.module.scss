@@ -1,0 +1,62 @@
+@import "src/themes/_variables.scss";
+
+:local {
+
+	.container {
+		margin-top: var(--top-bar-height);
+	}
+
+	.title {
+		width: 100%;
+		text-align: center;
+		font-size: 38px;
+		color: white;
+		max-width: 500px;
+		margin: 0 auto;
+		height: 100%;
+		display: flex;
+		align-items: flex-end;
+		padding: 90px 0px;
+
+		font-family: 'Roboto Slab', sans-serif;
+	}
+
+	.body {
+		display: flex;
+		position: relative;
+		@media all and (max-width: $breakpoint-tablet) {
+			flex-wrap: wrap;
+		}
+	}
+
+	.leftSide {
+		flex-basis: 50%;
+		@media all and (max-width: $breakpoint-tablet) {
+			flex-basis: 100%;
+		}
+	}
+
+	.rightSide {
+		flex-basis: 50%;
+		overflow: hidden;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		padding: 0 1em 2.25em 1em;
+		// min-height: 700px;
+
+		> div {
+			max-width: 550px;
+			width: 100%;
+			margin: 0 auto;
+		}
+
+		@media all and (max-width: $breakpoint-tablet) {
+			flex-basis: 100%;
+			> div {
+				max-width: 100%;
+				margin: 0 auto;
+			}
+		}
+	}
+}

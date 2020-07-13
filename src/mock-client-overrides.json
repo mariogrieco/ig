@@ -1,0 +1,40 @@
+{
+  "campaign": {
+    "client": {
+      "name": "Home Town"
+    },
+    "videos": {
+      "sidebar": "https://s3.amazonaws.com/com.shift.videos.test.upgrade-sale-2019-1/23105da0-58fd-4f71-ac07-830404d91677.mp4"
+    }
+  },
+  "lead": {
+    "fields": {
+      "firstName": "Mickey",
+      "lastName": "Mouse",
+      "email": "Mickey@Mouse.com",
+      "phoneNumber": "55555555555",
+
+      "addres": "addres",
+      "zip": "33134",
+      "city": "City",
+      "state": "State",
+      "suiteAptNum": "304",
+
+      "donationType": "",
+      "donationAmount": "",
+
+      "sameAsContact": false,
+      "nameOnCard": "",
+      "creditCardNumber": "",
+      "cardType": "",
+      "cardExpiry": "",
+      "cvv": "",
+
+      "billingAddress": "",
+      "billingSuiteAptNum": "",
+      "billingCity": "",
+      "billingState": "",
+      "billingZipCode": ""
+    }
+  }
+}

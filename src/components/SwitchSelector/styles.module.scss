@@ -1,0 +1,80 @@
+:local {
+	.container {
+		background-color: #F3ECE4;
+		height: 64px;
+		border-radius: 4px;
+		position: relative;
+	}
+
+	.uidata {
+		position: absolute;
+		left: 0;
+		right: 0;
+		bottom: 0;
+		top: 0;
+		display: flex;
+		justify-content: space-around;
+		align-items: center;
+		z-index: 10;
+	}
+
+	.maskValidator {
+		input {
+			background-color: transparent;
+			font-size: 0;
+			width: 100%;
+			height: 100%;
+			display: block;
+			overflow: hidden;
+			border-color: transparent;
+			outline: none;
+			position: relative;
+			padding: 0;
+			margin: 0;
+			border-width: 0;
+		}
+		position: absolute;
+		font-size: 0;
+		left: 0;
+		right: 0;
+		bottom: 0;
+		top: 0;
+		z-index: 0;
+	}
+
+	.option {
+		height: 55px;
+		border-radius: 4px;
+		color: #C9A583;
+		font-weight: bold;
+		line-height: 53px;
+		text-align: center;
+		position: relative;
+		cursor: pointer;
+		flex-basis: calc(50% - 10px);
+        box-shadow: 0 1.5px 1.5px 3.5px rgba(240,240,240, 0);
+        border: 1px solid transparent;
+		opacity: 0.8;
+		transition: all .25s ease;
+		cursor: pointer;
+
+        &:focus,
+        &:active,
+        &:hover {
+			opacity: 1;
+			background: rgba(255, 255, 255, .5);
+		}
+
+		&.active {
+			box-shadow: 0 1.5px 1.5px 3.5px rgba(197, 158, 120, 0.15);
+			border: 1px solid #c59e78;
+			background-color: white;
+			opacity: 1;
+			&:focus,
+			&:active,
+			&:hover {
+				opacity: 0.8;
+			}
+		}
+	}
+}

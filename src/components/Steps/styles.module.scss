@@ -1,0 +1,96 @@
+@import "src/themes/_variables.scss";
+
+:local {
+  .title {
+    text-align: center;
+  }
+
+  .container {
+    overflow: hidden;
+    width: 100%;
+    padding: 30/16+em;
+    padding-bottom: 0;
+    @media all and (max-width:$breakpoint-mobile) {
+      padding-top: 0;
+    }
+  }
+
+  .description {
+    color: #9FA3AB;
+    line-height: 1.625;
+    text-align: center;
+    margin-top: 15/16+em;
+    margin-bottom: 0;
+  }
+
+  .checkmark {
+    display: none; // not needed for this theme
+  }
+
+  .stepLabels {
+    padding: 0;
+    text-align: center;
+    white-space: nowrap;
+
+    margin-bottom: 10/16 * 1em;
+  }
+
+  .stepsContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 1em;
+    padding-bottom: 1em;
+    margin-bottom: 1em;
+  }
+
+  .stepLabel {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    overflow: hidden;
+    position: relative;
+    margin: 8px;
+    span {
+      position: absolute;
+      left: 0;
+      right: 0;
+      top: 0;
+      bottom: 0;
+    }
+  }
+
+  .bar {
+    width: 100%;
+    position: relative;
+
+    &,
+    .barActiveBlock {
+      height: 9/16+em;
+      border-radius: 10/16+em;
+    }
+
+    .barActiveBlock {
+      content: '';
+      display: block;
+      position: absolute;
+      top: 0;
+      width: 1em;
+      height: 1em;
+    }
+  }
+
+  @media all and (max-width:$breakpoint-mobile) {
+    .container {
+      margin-bottom: 0;
+    }
+    .stepsContainer {
+      padding-top: 0em;
+      padding-bottom: 0em;
+    }
+    .stepLabel {
+      margin-bottom: 0em;
+      margin-top: 1.62em;
+    }
+  }
+}

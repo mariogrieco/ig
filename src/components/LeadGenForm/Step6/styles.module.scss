@@ -1,0 +1,46 @@
+@import "src/themes/__variables.scss";
+
+:local {
+	.donation {
+		width: 100%;
+		height: 120px;
+		background-color: #FFFFFF;
+		border-radius: 4px;
+		text-align: center;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		flex-direction: column;
+	}
+
+	.donationTitle {
+		color: #83848E;
+		font-size: 16px;
+		margin: 4px 0;
+		font-weight: bolder;
+	}
+
+	.donationAmount {
+		font-weight: bolder;
+		color: #C59E78;
+		font-size: 30px;
+		margin: 4px 0;
+	}
+
+	.donationSummary {
+		display: flex;
+		flex-direction: column;
+		justify-content: space-around;
+	}
+
+	.summaryTitle {
+		color: #C59E78;
+		margin-bottom: 15px;
+	}
+
+	.summaryItem {
+		color: #91919a;
+		display: block;
+		margin: 5px 0;
+	}
+}

@@ -1,0 +1,11 @@
+@import "src/themes/__variables.scss";
+
+:local {
+	.text {
+		color: #1B4587;
+		font-size: 32px;
+		font-weight: normal;
+		height: 100%;
+		text-align: center;
+	}
+}

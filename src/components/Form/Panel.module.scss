@@ -1,0 +1,13 @@
+:local {
+  .panel {
+    transition: all .25s ease-in-out;
+    overflow: hidden;
+    padding: 0 1.5em;
+    margin: 0 -1.5em;
+
+    &.isHidden {
+      opacity: 0;
+      max-height: 0 !important;
+    }
+  }
+}

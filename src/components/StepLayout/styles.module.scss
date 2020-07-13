@@ -1,0 +1,32 @@
+@import "src/themes/__variables.scss";
+
+:local {
+	.container {
+		text-align: center;
+		height: 100%;
+		margin: auto;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		flex-direction: column;
+		padding: 50px 25px;
+
+		> h2 {
+			color: #1B4587;
+			font-size: 32px;
+			font-weight: normal;
+		}
+
+		> p {
+			color: #8C8C95;
+			font-size: 18px;
+			font-weight: normal;
+		}
+
+		> button {
+			max-width: 350px;
+			font-weight: bold;
+			margin: 0 auto;
+		}
+	}
+}
