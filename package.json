@@ -44,7 +44,7 @@
     "url-parse": "^1.4.7"
   },
   "scripts": {
-    "start": "PORT=3001 HOST=0.0.0.0 HTTPS=true react-app-rewired start",
+    "start": "react-app-rewired start",
     "build": "react-app-rewired build",
     "create-component": "node ./scripts/create-component.js",
     "flow": "flow",
