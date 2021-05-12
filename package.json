@@ -38,7 +38,7 @@
     "react-spring": "^8.0.27",
     "react-swiper-id": "^1.0.3",
     "react-text-mask": "^5.4.3",
-    "swiper": "^5.3.1",
+    "swiper": "^6.5.1",
     "text-mask-addons": "^3.8.0",
     "tween": "^0.9.0",
     "url-parse": "^1.4.7"
